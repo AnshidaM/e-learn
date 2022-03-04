@@ -52,4 +52,11 @@ class subjects(models.Model):
     subd =  models.CharField(max_length=100)
     subnom =  models.CharField(max_length=100)
     subnosid =  models.CharField(max_length=100)
-    
+
+class attendance(models.Model):
+    sid = models.CharField(max_length = 100)
+    subcode = models.CharField(max_length=100)
+    tname = models.CharField(max_length=100)
+    patdnce =  models.CharField(max_length=100)
+    remarks =  models.CharField(max_length=100)
+      
