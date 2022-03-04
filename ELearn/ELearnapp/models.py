@@ -41,7 +41,6 @@ class student(models.Model):
     smark =  models.CharField(max_length=100)  
 
 class subjects(models.Model):
-     
     subcode = models.CharField(max_length=100)
     subname = models.CharField(max_length=100)
     tname =  models.CharField(max_length=100)
@@ -64,4 +63,40 @@ class studymaterials(models.Model):
     subcode = models.CharField(max_length=100)
     mpath = models.CharField(max_length=100)
     mid =  models.CharField(max_length=100)
-          
+
+class tests(models.Model):
+     
+    sid = models.CharField(max_length=100)
+    subcode = models.CharField(max_length=100)
+    t1 =  models.CharField(max_length=100)
+    t2 =  models.CharField(max_length=100)
+    t3 =  models.CharField(max_length=100)
+    t1s =  models.CharField(max_length=100)
+    t2s =  models.CharField(max_length=100)
+    t3s =  models.CharField(max_length=100)
+    t1d =  models.CharField(max_length=100)
+    t2d =  models.CharField(max_length=100) 
+    t3d =  models.CharField(max_length=100)
+    sttotal =  models.CharField(max_length=100)
+    ttotal =  models.CharField(max_length=100)
+
+class work(models.Model):
+     
+    sid = models.CharField(max_length=100)
+    subcode = models.CharField(max_length=100)
+    w1 =  models.CharField(max_length=100)
+    w2 =  models.CharField(max_length=100)
+    w3 =  models.CharField(max_length=100)
+    w1s =  models.CharField(max_length=100)
+    w2s =  models.CharField(max_length=100)
+    w3s =  models.CharField(max_length=100)
+    w1d =  models.CharField(max_length=100)
+    w2d =  models.CharField(max_length=100) 
+    w3d =  models.CharField(max_length=100)
+    swtotal =  models.CharField(max_length=100)
+    wtotal =  models.CharField(max_length=100) 
+
+class feedback(models.Model):
+    uid = models.CharField(max_length=100)
+    fb = models.CharField(max_length=100)
+    toffb =  models.CharField(max_length=100)        
