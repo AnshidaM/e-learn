@@ -14,4 +14,14 @@ class admin(models.Model):
     adname = models.CharField(max_length=100)
     adpswd = models.CharField(max_length=100)
     adpno =  models.CharField(max_length=100)
-    
+
+class teaacher(models.Model):
+    tid = models.CharField(max_length = 100)
+    tname = models.CharField(max_length=100)
+    tpswd = models.CharField(max_length=100)
+    tnos =  models.CharField(max_length=100)
+    tsubcode =  models.CharField(max_length=100)
+    trole =  models.CharField(max_length=100)
+    tpno =  models.CharField(max_length=100)
+    tdob =  models.CharField(max_length=100)
+    tage =  models.CharField(max_length=100)  
