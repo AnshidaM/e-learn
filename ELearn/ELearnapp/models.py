@@ -15,7 +15,7 @@ class admin(models.Model):
     adpswd = models.CharField(max_length=100)
     adpno =  models.CharField(max_length=100)
 
-class teaacher(models.Model):
+class teacher(models.Model):
     tid = models.CharField(max_length = 100)
     tname = models.CharField(max_length=100)
     tpswd = models.CharField(max_length=100)
