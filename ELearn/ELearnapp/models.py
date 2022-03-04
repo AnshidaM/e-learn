@@ -39,3 +39,17 @@ class student(models.Model):
     snos =  models.CharField(max_length=100)
     sesubcode =  models.CharField(max_length=100)
     smark =  models.CharField(max_length=100)  
+
+class subjects(models.Model):
+     
+    subcode = models.CharField(max_length=100)
+    subname = models.CharField(max_length=100)
+    tname =  models.CharField(max_length=100)
+    subdrn =  models.CharField(max_length=100)
+    submarkd =  models.CharField(max_length=100)
+    subnos =  models.CharField(max_length=100)
+    subamin =  models.CharField(max_length=100)
+    subd =  models.CharField(max_length=100)
+    subnom =  models.CharField(max_length=100)
+    subnosid =  models.CharField(max_length=100)
+    
