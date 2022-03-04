@@ -59,4 +59,9 @@ class attendance(models.Model):
     tname = models.CharField(max_length=100)
     patdnce =  models.CharField(max_length=100)
     remarks =  models.CharField(max_length=100)
-      
+
+class studymaterials(models.Model):
+    subcode = models.CharField(max_length=100)
+    mpath = models.CharField(max_length=100)
+    mid =  models.CharField(max_length=100)
+          
