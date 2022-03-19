@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'ELearn.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'elearn',
+        'USER' : 'elearn',
+        'PASSWORD' : 'elearn',
+        'HOST' : '193.161.193.99',
+        'PORT' : 31410,
     }
 }
 
