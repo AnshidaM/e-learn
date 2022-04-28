@@ -1,0 +1,69 @@
+<html>
+    <head><title>Subject Map</title>
+    </head>
+        <body>
+            <p>Select Subject  :
+                <select name="Subs" class="form-control">
+                     {% for results in showsubs %}
+                     <option value="{{results.id}}">{{ results.sname}}</option>
+                     {% endfor %}
+                 </select>
+             </p>
+             <p>No.of Modules Completed:
+                <select name="modcompleted" id="modcompleted">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+             </p>
+
+             <p>No.of Modules Pending:
+                 <select name="modpending" id="modpending">
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                 </select>
+             </p>
+
+             <p>No.of Assigments Assigned:
+                 <select name="assigments" id="assigments">
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                 </select>
+             </p>
+
+             <p>No.of Tests Conducted:
+                <select name="tests" id="tests">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </p>
+
+            <p>Average Date of Subject to be completed :
+                <input type="date" id="completedate" name="completedate">
+            </p>
+
+            <p>Add Comments...</p>
+                <textarea id="subcomment" name="subcomment" rows="3" cols="30">
+                </textarea>
+            
+            <p><button type="submit" form="submap" value="Submit">Submit</button>
+            </p>
+
+        </body>
+</html>
+        

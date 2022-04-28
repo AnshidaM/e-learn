@@ -1,0 +1,13 @@
+<html>
+    <head><title>View Attendance</title>
+        <body>
+            <p>Select Subject  :
+                <select name="Subs" class="form-control">
+                     {% for results in showsubs %}
+                     <option value="{{results.id}}">{{ results.sname}}</option>
+                     {% endfor %}
+                </select>
+            </p>
+            <p>
+                <button type="submit" form="liveclass" value="View">View Attendance</button>
+            </p>
