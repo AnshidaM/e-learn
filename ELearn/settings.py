@@ -81,7 +81,7 @@ DATABASES = {
         'USER' : 'elearn',
         'PASSWORD' : 'elearn',
         'HOST' : '193.161.193.99',
-        'PORT' : 31410,
+        'PORT' : 63685,
     }
 }
 
