@@ -55,7 +55,7 @@ ROOT_URLCONF = 'ELearn.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates/ELearnapp'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

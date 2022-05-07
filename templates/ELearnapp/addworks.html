@@ -1,25 +1,27 @@
 <html>
 <head><title>Add Work</title>
 <body>
-<form action="" method="post" id="addwork">
+<form action="/addwork/" method="post">
+    {% csrf_token %}
+    <p>Work ID :
+    <input type="text" id="workid" name="workid" value="{{ workid }}">
+    </p>
 <p>Select Department  :
-    <select name="Subs" class="form-control">
-        {% for results in showdeps %}
-        <option value="{{results.id}}">{{ results.dname}}</option>
-        {% endfor %}
+    <select id="dptname" name="dptname" value="{{ dptname }}">
+        <option value="CSE">CSE</option>
+        <option value="CIVIL">CIVIL</option>
     </select>
 </p>
 
 <p>Select Subject  :
-   <select name="Subs" class="form-control">
-        {% for results in showsubs %}
-        <option value="{{results.id}}">{{ results.sname}}</option>
-        {% endfor %}
+    <select id="subname" name="subname" value="{{ subname }}">
+        <option value="GTC">GTC</option>
+        <option value="MAM">MAM</option>
     </select>
 </p>
 
 <p><u>Definition of Work :</u></p>
-    <textarea id="defwork" name="defwork" rows="4" cols="30">
+    <textarea id="defwork" name="defwork" rows="4" cols="30" value="{{ defwork }}">
     </textarea>
 
 <p>Upload Question or document :
@@ -27,21 +29,14 @@
 </p>
 
 <p>Start Date : 
-    <input type="date" id="startdate" name="startdate">
+    <input type="date" id="sdate" name="sdate" value="{{ sdate }}">
 </p>
 
 <p>End Date :
-    <input type="datetime-local" id="enddate" name="enddate">
+    <input type="datetime-local" id="edate" name="edate" value="{{ edate }}">
 </p>
 
-<p>Have Attachment or Not :
-    <input type="radio" id="yes" name="attachment" value="yes">
-    yes
-    <input type="radio" id="no" name="attachment" value="no">
-    no
-</p>
-
-<button type="submit" form="addwork" value="Submit">Submit</button>
+<button type="submit" value="Submit">Submit</button>
 </form>
 </body>
 </html>

@@ -1,7 +1,12 @@
 <html>
     <head><title>Login</title></head>
     <body>
-    <a href="studhome.html">Stud Home</a>
-    <a href="teachhome.html">Teacher Home</a>
+        <form method="post" action="/login/">
+            {% csrf_token %}
+    <p>Username :<input type="text" name="uid" placeholder="User Name"></p>
+    <p>Password<input type="password" name="upass" placeholder="Password"></p>
+    <p><input type="submit" name=""></p>
+    
+        </form>
     </body>
     </html>
