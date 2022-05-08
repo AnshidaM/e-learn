@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate,login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from mysqlx import Result
-from .models import Vrifylogin,Work
+from .models import Vrifylogin,Work,Subject
 # Create your views here.
 
 def addwork(request):
@@ -24,5 +24,22 @@ def addwork(request):
     else:
         return HttpResponse('Error Occure')
 
+def addsub(request):
+    if request.method == 'POST':
+      dptname = request.POST['dptname']
+      semno   = request.POST['semno']
+      subcode = request.POST['subcode']
+      subname = request.POST['subname']
+      subcredit = request.POST['subcredit']
+      syllabus = request.POST['syllabus']
+      tname = request.POST['tname']
+      new_sub = Subject(dptname = dptname,semno = semno,subcode = subcode,subname = subname,subcredit = subcredit,syllabus = syllabus,tname = tname)
+      new_sub.save()
+      return HttpResponse('Added Successfully')
+    elif request.method == 'GET':
+        return render(request, 'createsub.html')
+    else:
+        return HttpResponse('Error Occured')
+         
 
        
