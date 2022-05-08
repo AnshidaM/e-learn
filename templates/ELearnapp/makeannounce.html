@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form method= "POST" action="/makeannouncement/">
+    {% csrf_token %}   
+    <textarea rows="5" cols="50" name="announcements" id="announcements" value="{{announcements}}">
+      Announcements...
+    </textarea>
+    <br>
+    <button>Send</button>
+    <button>Reset</button>
+</form>
+</body>
+</html>

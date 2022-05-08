@@ -1,0 +1,64 @@
+<html>
+    <head><title>Subject Creation</title>
+    </head>
+    <body>
+        <form action="/addsub/" method= "POST">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>Department</td>
+                    <td>
+                        <select id="department" >
+                            <option>CSE</option>
+                            <option>CE</option>
+                            <option>EEE</option>
+                            <option>ME</option>
+                            <option>ECE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Semester</td>
+                    <td>
+                        <select id="semester" >
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                  <td>Subject Code : </td>
+                  <td><input type="text" name="subcode" id="subcode"  value="{{ subcode }}" size="10"></td>
+                </tr>
+                <tr>
+                  <td>Subject Name : </td>
+                  <td><input type="text" name="subname" id="subname"  value="{{ subname }}" size="30"></td>
+                </tr>
+                <tr>
+                  <td>Subject Credit : </td>
+                  <td><input type="text" name="subcredit"  id="subcredit"  value="{{ subcredit }}" size="10"></td>
+                </tr>
+                <tr>
+                    <td>Upload Syllabus: </td>
+                    <td><input type="file" id="syllabus" name="syllabus"></td>
+                </tr>
+                <tr>
+                    <td>Subject Teacher : </td>
+                    <td><input type="text" name="tname" id="tname"  value="{{ tname }}" size="15"></td>
+                  </tr>
+                <tr>
+                    <td>
+                        <input type="reset" value="Clear"> &nbsp;
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>  
+        </form>
+    </body>
+</html>
