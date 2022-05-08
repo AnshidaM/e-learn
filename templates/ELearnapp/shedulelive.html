@@ -2,6 +2,7 @@
     <head><title>Schedule Live</title>
     </head>
     <body>
+        <form action="/schedulelive/" method="POST">
         <p>Select Subject  :
             <select name="Subs" class="form-control">
                  {% for results in showsubs %}
@@ -23,6 +24,6 @@
          <p>
              <button type="submit" form="liveclass" value="Submit">Submit</button>
          </p>
-
+        </form>
     </body>
 </html>

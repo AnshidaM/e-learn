@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate,login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from mysqlx import Result
-from .models import Vrifylogin,Work,Subject,Announcements
+from .models import Vrifylogin,Work,Subject,Announcements,Feedback
 # Create your views here.
 
 def addwork(request):
@@ -52,5 +52,16 @@ def makeannouncement(request):
     else:
         return HttpResponse('Error Occured')
          
+def feedback(request):
+    if request.method == 'POST':
+        feedback = request.POST['feedback']
+        new_fb = Feedback(feedback = feedback)
+        new_fb.save()
+        return HttpResponse('Added Successfully')
+    elif request.method == 'GET':
+        return render(request,'feedback.html')
+    else:
+        return HttpResponse('Error Occured')
+        
 
        
