@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate,login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from mysqlx import Result
-from .models import Vrifylogin,Work,Subject
+from .models import Vrifylogin,Work,Subject,Announcements
 # Create your views here.
 
 def addwork(request):
@@ -38,6 +38,17 @@ def addsub(request):
       return HttpResponse('Added Successfully')
     elif request.method == 'GET':
         return render(request, 'createsub.html')
+    else:
+        return HttpResponse('Error Occured')
+    
+def makeannouncement(request):
+    if request.method == 'POST':
+        announcements=request.POST['announcements']
+        new_announcement= Announcements(announcements = announcements)
+        new_announcement.save()
+        return HttpResponse('Added Successfully')
+    elif request.method == 'GET':
+        return render(request, 'makeannounce.html')
     else:
         return HttpResponse('Error Occured')
          
